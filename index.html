@@ -16,13 +16,6 @@
 
 		<!-- Styles -->
 		<style>
-			body {
-				font-family: 'Nunito', sans-serif;
-			}
-			.rlink {
-				margin: 10px;
-				padding: 10px;
-			}
 		</style>
 		
 		<link href="css/app.css" rel="stylesheet">
@@ -35,53 +28,11 @@
 
 	<body>
 		<div id="app">
-			<p>
-				<router-link to="/" class="rlink">Go to Home</router-link>
-				<router-link to="/about" class="rlink">Go to About</router-link>
-				<router-link to="/users/123" class="rlink">Go to User</router-link>
-			</p>
-
-            <span v-html="`<div> hello </div>`"></span>
-
 			<!-- Router -->
 			<router-view></router-view>
-
-			<!-- Widget -->
-			<!--
-			<div class="btc">
-				<h1>Bitcoin Price Index</h1>
-
-				<section v-if="errored">
-				<p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
-				</section>
-
-				<section v-else>
-					<div v-if="loading">Loading...</div>
-
-					<div
-						v-else
-						v-for="currency in info"
-						class="currency"
-					>
-						@{{ currency.description }}:
-						<span class="lighten">
-							<span v-html="currency.symbol"></span>@{{ currency.rate_float | currencydecimal }}
-						</span>
-					</div>
-				</section>
-			</div>
-			-->
-
 		</div>
 	</body>
 
-	<!-- Initialize app -->
-	<script src="vue/app-init.js"></script>
-
-	<!-- App components -->
-	<script src="vue/components/login-form.js"></script>
-	<script src="vue/components/about.js"></script>
-
-	<!-- Run app router -->
-	<script src="vue/app-run.js"></script>
+	<!-- Run app -->
+	<script src="vue/app.js" type="module"></script>
 </html>
