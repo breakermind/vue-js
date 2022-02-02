@@ -5,7 +5,7 @@ export default {
 		MenuPanel
 	},
 	template: `
-		<MenuPanel></MenuPanel>
+		<MenuPanel/>
 
 		<div id="box">
 			<h1> {{ title }} </h1>

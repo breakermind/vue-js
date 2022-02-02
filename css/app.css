@@ -28,9 +28,10 @@ body {
 	float: left;
 	width: 100%;
 	margin: 10px 0px;
-	padding: 5px;
+	padding: 15px;
 	color: #f25;
 	background: #ff223306;
+	border-radius: 9px;
 }
 
 .info {
@@ -65,8 +66,16 @@ button {
 	border-radius: 9px;
 }
 
+.form-title {
+	float: left;
+	width: 100%;
+	margin: 0px 0px 10px 0px;
+	font-size: 21px;
+	font-weight: 700;
+}
+
 form {
-	margin: 30px auto;
+	margin: 130px auto;
 	padding: 20px;
 	width: 90%;
 	max-width: 450px;
@@ -77,11 +86,74 @@ form {
 form input {
 	float: left;
 	width: 100%;
-	margin: 5px 0px;
-	padding: 10px 20px;
+	margin: 10px 0px;
+	padding: 19px 25px;
+	font-size: 16px;
+	font-weight: 400;
+	border: 2px solid #003399;
+	border-radius: 9px;
 }
 
-.form-title {
+.submit-btn {
+	float: right;
+	width: auto;
+	padding: 15px 42px;
+	color: #fff;
+	background: #003399;
+	cursor: pointer;
+}
+
+label {
 	float: left;
 	width: 100%;
+}
+
+input[type="checkbox"]:checked + label {
+	font-weight: bold;
+}
+
+.cool-checkbox {
+	float: left;
+	width: 100%;
+	height: 35px;
+	margin: 10px;
+	display: inline-block;
+}
+
+.sbtn {
+	float: left;
+	width: auto;
+	padding: 5px;
+	background: #fff;
+	position: absolute;
+	border: 1px solid #003399;
+}
+.sbtn .dot {
+	float: left;
+	width: auto;
+	padding: 10px;
+	margin: 0px 30px 0px 0px;
+	background: #fff;
+	border: 1px solid #003399;
+	transition: all .1s;
+}
+
+input[type="checkbox"] {
+	width: 60px;
+	height: 35px;
+	position: absolute;
+	z-index: 999;
+	opacity: 0;
+	cursor: pointer;
+}
+
+input[type="checkbox"]:checked + .sbtn {
+	background: #00339911;
+}
+
+input[type="checkbox"]:checked + .sbtn .dot {
+	float: right;
+	margin: 0px 0px 0px 30px;
+	background: #003399;
+	border: 1px solid #003399;
 }

@@ -14,7 +14,7 @@ export default {
 			<input v-model="email" v-focus placeholder="Email address">
 			<input v-model="password" type="password" placeholder="Password">
 
-			<input type="submit" value="Login">
+			<input type="submit" value="Login" class="submit-btn">
 		</form>
 	`,
 	props: ['title'],

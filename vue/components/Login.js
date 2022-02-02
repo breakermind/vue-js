@@ -7,7 +7,7 @@ export default {
 		LoginForm: Vue.defineAsyncComponent(() => import('./forms/LoginForm.js'))
 	},
 	template: `
-		<MenuPanel></MenuPanel>
+		<MenuPanel/>
 
 		<div id="box">
 			<!-- Component with event -->
