@@ -46,18 +46,28 @@ export default {
 		</style>
 		-->
 	`,
+	props: {
+		title: {
+			type: String,
+			default: 'Welcome again!',
+			// required: true
+		}
+	},
+	emits: ['submit'],
 	data() {
 		return {
 			count: 1,
-			title: 'Welcome page',
 			checkedContact: [],
+			// title_attr: this.$attrs.title,
 		}
 	},
 	methods: {
 		checkContact: function(e) {
 			this.$nextTick(() => {
 				console.log(this.checkedContact, e)
+
+				this.$emit('submit', { options: this.checkedContact })
 			})
 		}
-  	}
+	}
 }
